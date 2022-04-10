@@ -1,4 +1,5 @@
 const nameInput = document.getElementById("nameInput");
+const btnInput = document.getElementById("btnInput")
 
 window.onload=()=>{
     var nameArray = ["Gideon","Phillip","Elon"];
