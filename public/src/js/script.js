@@ -13,5 +13,5 @@ window.onload=()=>{
 const searchUser = async ()=>{
     const url = "https://pointh3.herokuapp.com/api/users/";
     const users = await fetch(url).then(el=>el.json()).then(el=>{return el.users});
-    console.log(users)
+    alert(users[0].name)
 };
