@@ -20,9 +20,3 @@ const paths = {
         app.listen(port,()=>{
             console.log(`SERVER ON: http://localhost:${port}/`);
         });
-
-    
-
-
-
-
