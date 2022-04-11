@@ -11,11 +11,12 @@ window.onload=()=>{
 };
 
 const searchUser = async ()=>{
-    const url = "https://pointh3.herokuapp.com/api/users/";
+    const url = "https://pointh3.herokuapp.com/api/users";
     const users = await fetch(url,{
-        method:"GET",
+        method:"POST",
+        headers:{"asd"},
         body:JSON.stringify({
-            "name":"Joaquin"
+            name:"Joaquin"
         })
     }).then(el=>el.json());
     console.log(users)
