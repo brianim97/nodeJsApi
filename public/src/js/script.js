@@ -7,7 +7,7 @@ window.onload=()=>{
     var surnameArray = ["McKenzie","Marmaduke","Dominic","Gated"];
     var rand2 = Math.floor(Math.random()*surnameArray.length);
     var res = nameArray[rand1]+" "+surnameArray[rand2];
-    nameInput.placeholder=res;
+    //nameInput.placeholder="Nombre...";
 };
 
 //<li class="list-group-item">A second item <span class="text-primary">HOLA</span> </li>     
