@@ -20,7 +20,7 @@ const searchUser = async ()=>{
     users.forEach(el => {
         var obj = document.createElement("li");
         obj.classList.add("list-group-item");
-        obj.innerHTML = `${el.name} <span class="text-primary">ID: ${el.mail}</span> </li>`;
+        obj.innerHTML = `${el.name} <span class="text-primary">${el.mail}</span> </li>`;
         container.appendChild(obj);
         console.log(el)
     });
