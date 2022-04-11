@@ -7,6 +7,8 @@ const dbConnection = require('./db/config');
 const app = express();
 const port= process.env.PORT;
 
+app.use(cors());
+
 const paths = {
             users:'/api/users'
         }
