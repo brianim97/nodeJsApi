@@ -9,10 +9,10 @@ const router = Router();
 router.get('/',usersGet);
 
 router.post('/',[
-    check('name','El nombre es obligatorio').not().isEmpty(),
+    check('name','El nombre es obligatorio (MIN:3 MAX:10)').not().isEmpty().isLength({min:3}).isLength({max:10}),
     check('mail','El email es invalido').isEmail(),
     check('mail').custom(existMail),
-    check('password','La contraseña debe contener al menos 3 caracteres').isLength({min:3}),
+    check('password','La contraseña debe contener al menos 3 caracteres (MIN:3 MAX:10)').isLength({min:3}).isLength({max:10}),
     validarCampos
 ],
 usersPost);
