@@ -14,7 +14,6 @@ const searchUser = async ()=>{
     const url = "https://pointh3.herokuapp.com/api/users";
     const users = await fetch(url,{
         method:"POST",
-        headers:{"asd"},
         body:JSON.stringify({
             name:"Joaquin"
         })

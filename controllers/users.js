@@ -2,8 +2,10 @@ const {request, response} = require('express');
 const User = require('../models/user')
 
 const usersGet = async (req = request, res = response)=>{
-    const filters = req.body;
-    const users = await User.find(filters)
+    //const filters = req.body;
+    const users = await User.find({
+        status:true
+    })
     res.json({
         users
     })

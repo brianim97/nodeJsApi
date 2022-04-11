@@ -15,6 +15,10 @@ const UserSchema = Schema({
         type:String,
         required:[true,'La contraseña es obligatoria'],
     },
+    status:{
+        type:Boolean,
+        default:true
+    }
 })
 
 
