@@ -11,6 +11,7 @@ window.onload=()=>{
     var rand2 = Math.floor(Math.random()*surnameArray.length);
     var res = nameArray[rand1]+" "+surnameArray[rand2];
     //nameInput.placeholder="Nombre...";
+    searchUser();
 };
 
 const createUser = async ()=>{
