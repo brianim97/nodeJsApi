@@ -11,6 +11,7 @@ window.onload=()=>{
     var rand2 = Math.floor(Math.random()*surnameArray.length);
     var res = nameArray[rand1]+" "+surnameArray[rand2];
     //nameInput.placeholder="Nombre...";
+    searchUser();
 };
 
 const createUser = async ()=>{
@@ -24,7 +25,7 @@ const createUser = async ()=>{
         })
     }).then(el=>el.json());
 
-    console.log(users);
+    if(users.errors){alert(users.errors[0].msg)}
     searchUser();
 };
 const searchUser = async ()=>{
@@ -36,7 +37,7 @@ const searchUser = async ()=>{
         obj.classList.add("list-group-item");
         obj.innerHTML = `${el.name} <span class="text-primary">${el.mail}</span> </li>`;
         container.appendChild(obj);
-        console.log(el)
+        //console.log(el)
     });
     
 };
