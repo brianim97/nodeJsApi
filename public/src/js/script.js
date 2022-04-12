@@ -11,7 +11,6 @@ window.onload=()=>{
     var rand2 = Math.floor(Math.random()*surnameArray.length);
     var res = nameArray[rand1]+" "+surnameArray[rand2];
     //nameInput.placeholder="Nombre...";
-    searchUser();
 };
 
 const createUser = async ()=>{
@@ -25,8 +24,10 @@ const createUser = async ()=>{
         })
     }).then(el=>el.json());
 
-    if(users.errors){alert(users.errors[0].msg)}
+    if(localStorage.getItem("login"))return alert("Solo se permite una cuenta por dispositivo")
+    if(users.errors)return alert(users.errors[0].msg);
     searchUser();
+    localStorage.setItem("login",true);
 };
 const searchUser = async ()=>{
     container.innerHTML=" ";
