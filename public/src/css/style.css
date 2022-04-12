@@ -12,3 +12,13 @@ a:hover{
     color: white !important;
     width: 100% !important;
 }
+
+.container>input{
+    margin-top: 2%;
+}
+
+.container>button{
+    margin-top: 2%;
+}
+
+
