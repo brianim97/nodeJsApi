@@ -1,6 +1,9 @@
+const url = "https://pointh3.herokuapp.com/api/users";
 const nameInput = document.getElementById("nameInput");
-const btnInput = document.getElementById("btnInput")
-const container = document.getElementById("container")
+const mailInput = document.getElementById("mailInput")
+const btnInput = document.getElementById("btnInput");
+const passwordInput = document.getElementById("passwordInput")
+const container = document.getElementById("container");
 window.onload=()=>{
     var nameArray = ["Gideon","Phillip","Elon"];
     var rand1 = Math.floor(Math.random()*nameArray.length);
@@ -10,13 +13,24 @@ window.onload=()=>{
     //nameInput.placeholder="Nombre...";
 };
 
-//<li class="list-group-item">A second item <span class="text-primary">HOLA</span> </li>     
+const createUser = async ()=>{
+    const users = await fetch(url,{
+        method:"POST",
+        headers:{"Content-Type": "application/json"},
+        body:JSON.stringify({
+            name:nameInput.value,
+            mail:mailInput.value,
+            password:passwordInput.value
+        })
+    }).then(el=>el.json());
 
+    console.log(users);
+    searchUser();
+};
 const searchUser = async ()=>{
     container.innerHTML=" ";
-    const url = "https://pointh3.herokuapp.com/api/users";
+    
     const users = await fetch(url).then(el=>el.json()).then(el=>{return el.users});
-    const a = [1,2,3,4,"asd"]
     users.forEach(el => {
         var obj = document.createElement("li");
         obj.classList.add("list-group-item");
