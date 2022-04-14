@@ -1,8 +1,8 @@
-const url = "https://pointh3.herokuapp.com/api/users";
+const url = "http://localhost:8080/api/users";
 
 const form = document.querySelector(".form")
 const nameInput = document.getElementById("nameInput");
-const mailInput = document.getElementById("mailInput")
+//const mailInput = document.getElementById("mailInput")
 const passwordInput = document.getElementById("passwordInput")
 const btnInput = document.getElementById("btnInput");
 
@@ -12,10 +12,7 @@ const container = document.getElementById("container");
 
 
 window.onload=()=>{
-    console.log('Ready!')
-    let user = JSON.parse(localStorage.getItem('user'));
-    console.log(user);
-    searchUser();
+    console.log('Ready!');
 };
 
 const createUser = async ()=>{
@@ -56,6 +53,6 @@ const searchUser = async ()=>{
 };
 
 btnInput.addEventListener('click',(ev)=>{
-    createUser();
+    //createUser();
 });
 

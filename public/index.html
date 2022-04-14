@@ -20,22 +20,21 @@
 <body class="bg-dark" style="color: white;">
 
     
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-5">
         <div>
             <div class="container">
-                <p>Register<span class="text-danger">*</span></p>
+                <h3 class="text-center">Login</h3>
                 <input class="text-center" type="text" placeholder="Nombre" id="nameInput" required> <br>
-                <input class="text-center" type="text" placeholder="Mail" id="mailInput" required> <br>
+                <!-- <input class="text-center" type="text" placeholder="Mail" id="mailInput" required> <br> -->
                 <input class="text-center" type="password" placeholder="Contraseña" id="passwordInput" required> <br>
-                <button class="btn btn-primary btn-block" id="btnInput" style="width: 100%;">Crear</button>
+                <button class="btn btn-primary btn-block" id="btnInput" style="width: 100%;">Ingresar</button>
                 
             </div>
-            <form action="createUser()"></form>
         </div>
     </div>
-    <hr>
+    
 
-    <div class="m-2" id="usuarios">
+    <div class="m-2 d-none" id="usuarios">
         <ul class="list-group" >
             <li class="list-group-item active" aria-current="true">Usuarios </li>
             <li class="list-group-item text-danger">Nombre & Contacto</li>     
@@ -48,9 +47,7 @@
 
 
     <footer class="text-center">
-        
         <p>Made With ❤ by <a href="https://github.com/pointH3">pointH3</a></p>
-        <i class="bi bi-github fs-6"></i>
     </footer>
 
     <script src="src/js/script.js"></script>
