@@ -5,12 +5,13 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "lol":"nodemon app.js"
+    "lol": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-icons": "^1.8.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",

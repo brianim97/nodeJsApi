@@ -1,16 +1,20 @@
 const url = "https://pointh3.herokuapp.com/api/users";
+
+const form = document.querySelector(".form")
 const nameInput = document.getElementById("nameInput");
 const mailInput = document.getElementById("mailInput")
-const btnInput = document.getElementById("btnInput");
 const passwordInput = document.getElementById("passwordInput")
+const btnInput = document.getElementById("btnInput");
+
+const users = document.querySelector('.usuarios')
 const container = document.getElementById("container");
+
+
+
 window.onload=()=>{
-    var nameArray = ["Gideon","Phillip","Elon"];
-    var rand1 = Math.floor(Math.random()*nameArray.length);
-    var surnameArray = ["McKenzie","Marmaduke","Dominic","Gated"];
-    var rand2 = Math.floor(Math.random()*surnameArray.length);
-    var res = nameArray[rand1]+" "+surnameArray[rand2];
-    //nameInput.placeholder="Nombre...";
+    console.log('Ready!')
+    let user = JSON.parse(localStorage.getItem('user'));
+    console.log(user);
     searchUser();
 };
 
@@ -25,11 +29,13 @@ const createUser = async ()=>{
         })
     }).then(el=>el.json());
 
-    if(localStorage.getItem("login"))return alert("Solo se permite una cuenta por dispositivo")
+    //if(localStorage.getItem("login"))return alert("Solo se permite una cuenta por dispositivo")
     if(users.errors)return alert(users.errors[0].msg);
-    searchUser();
-    localStorage.setItem("login",true);
+    console.log(users);
+    localStorage.setItem('user',JSON.stringify(users))
+    //localStorage.setItem("login",true);
 };
+
 const searchUser = async ()=>{
     container.innerHTML=" ";
     
@@ -38,9 +44,18 @@ const searchUser = async ()=>{
         var obj = document.createElement("li");
         obj.classList.add("list-group-item");
         obj.innerHTML = `${el.name} <span class="text-primary">${el.mail}</span> </li>`;
+
+        if(el.mail=='admin@gmail.com'){
+            obj.innerHTML = `<li><i class="bi bi-award"></i> ${el.name} <span class="text-primary">${el.mail}</span> </li>`;
+        }
+
         container.appendChild(obj);
         //console.log(el)
     });
     
 };
+
+btnInput.addEventListener('click',(ev)=>{
+    createUser();
+});
 
