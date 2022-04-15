@@ -1,5 +1,5 @@
-const url = "http://localhost:8080/api/";
-//const url = "http://pointh3.herokuapp.com/api/users";
+//const url = "http://localhost:8080/api/";
+const url = "http://pointh3.herokuapp.com/api/";
 
 const form = document.querySelector(".form")
 //const nameInput = document.getElementById("nameInput");
