@@ -4,7 +4,7 @@ const dbConnection = async()=>{
 
     try {
         await mongoose.connect(process.env.MONGO_CNN);
-        console.log('database OK');
+        console.log('Database: OK');
         
         // {
         //     useNewUrlParser: true,

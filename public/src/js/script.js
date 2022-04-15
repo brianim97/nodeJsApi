@@ -1,9 +1,9 @@
-//const url = "http://localhost:8080/api/users";
-const url = "http://pointh3.herokuapp.com/api/users";
+const url = "http://localhost:8080/api/";
+//const url = "http://pointh3.herokuapp.com/api/users";
 
 const form = document.querySelector(".form")
-const nameInput = document.getElementById("nameInput");
-//const mailInput = document.getElementById("mailInput")
+//const nameInput = document.getElementById("nameInput");
+const mailInput = document.getElementById("mailInput")
 const passwordInput = document.getElementById("passwordInput")
 const btnInput = document.getElementById("btnInput");
 
@@ -12,17 +12,26 @@ const container = document.getElementById("container");
 
 
 
-window.onload=()=>{
+window.onload = () => {
     console.log('Ready!');
 };
 
-const loginUser = ()=>{
-    fetch(url,{
-        method:"POST"
-    })
+const loginUser = async () => {
+    const data = await fetch(url+'auth/login', {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            mail: mailInput.value,
+            password: passwordInput.value
+        })
+    }).then(el=>el.json())
+    console.log(data)
+    if(data.errors)return alert(data.errors[0].msg);
+    //if(data.msg)return alert(data.msg);
+    console.log('Logged!');
 };
 
-btnInput.addEventListener('click',(ev)=>{
-    //createUser();
+btnInput.addEventListener('click', (ev) => {
+    loginUser();
 });
 
