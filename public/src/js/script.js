@@ -7,6 +7,8 @@ const mailInput = document.getElementById("mailInput")
 const passwordInput = document.getElementById("passwordInput")
 const btnInput = document.getElementById("btnInput");
 
+const userInfo = document.getElementById('userInfo')
+
 const users = document.querySelector('.usuarios')
 const container = document.getElementById("container");
 
