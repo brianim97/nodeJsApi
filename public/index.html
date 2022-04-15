@@ -22,14 +22,14 @@
 <body class="bg-dark" style="color: white;">
 
     
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center mt-5" id="loginContainer">
         <div>
-            <div class="container">
+            <div>
                 <h3 class="text-center">Login</h3>
                 <!-- <input class="text-center" type="text" placeholder="Nombre" id="nameInput" required> <br> -->
-                <input class="text-center" type="text" placeholder="Correo" id="mailInput" required> <br>
-                <input class="text-center" type="password" placeholder="Contraseña" id="passwordInput" required> <br>
-                <button class="btn btn-primary btn-block" id="btnInput" style="width: 100%;">Ingresar</button>
+                <input class="text-center mt-1" type="text" placeholder="Correo" id="mailInput" required> <br>
+                <input class="text-center mt-1" type="password" placeholder="Contraseña" id="passwordInput" required> <br>
+                <button class="btn btn-primary btn-block mt-1" id="btnInput" style="width: 100%;">Ingresar</button>
             </div>
         </div>
         
@@ -38,7 +38,10 @@
     
     
     <div class="d-none" id="userInfoContainer">
-        <div id="userInfo"></div>
+        <div class="p-2" id="userInfo">
+            <h3>Nombre</h3>
+            <p>mail@gmail.com</p>
+        </div>
         <hr>
     </div>
 

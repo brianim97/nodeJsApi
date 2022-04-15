@@ -1,7 +1,7 @@
 const url = "http://localhost:8080/api/";
 //const url = "http://pointh3.herokuapp.com/api/";
 
-const form = document.querySelector(".form")
+const loginContainer = document.getElementById('loginContainer')
 //const nameInput = document.getElementById("nameInput");
 const mailInput = document.getElementById("mailInput")
 const passwordInput = document.getElementById("passwordInput")
@@ -33,8 +33,10 @@ const loginUser = async () => {
     
     //
     userInfoContainer.classList.toggle('d-none')
+    loginContainer.classList.toggle('d-none')
     userInfo.innerHTML=`
         <h3>${data.user.name}</h3>
+        <p>${data.user.mail}</p>
     `
 
 };
