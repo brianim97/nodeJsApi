@@ -29,6 +29,7 @@ const loginUser = async () => {
     if(data.errors)return alert(data.errors[0].msg);
     //if(data.msg)return alert(data.msg);
     console.log('Logged!');
+    alert('te logeaste negro')
 };
 
 btnInput.addEventListener('click', (ev) => {
