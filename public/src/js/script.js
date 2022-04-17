@@ -1,16 +1,16 @@
 //const url = "http://localhost:8080/api/";
 const url = "http://pointh3.herokuapp.com/api/";
 
-const loginContainer = document.getElementById('loginContainer')
+const loginContainer = document.getElementById('loginContainer');
 //const nameInput = document.getElementById("nameInput");
 const mailInput = document.getElementById("mailInput")
-const passwordInput = document.getElementById("passwordInput")
+const passwordInput = document.getElementById("passwordInput");
 const btnInput = document.getElementById("btnInput");
 
-const userInfoContainer = document.getElementById('userInfoContainer')
-const userInfo = document.getElementById('userInfo')
+const userInfoContainer = document.getElementById('userInfoContainer');
+const userInfo = document.getElementById('userInfo');
 
-const users = document.querySelector('.usuarios')
+const users = document.querySelector('.usuarios');
 const container = document.getElementById("container");
 
 window.onload = () => {
